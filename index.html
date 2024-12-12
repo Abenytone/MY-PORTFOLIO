@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abenezer's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h3>A</h3>benezer</div>
+            <nav class="nav">
+                <div class="hamburger">☰</div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#expertise">My Expertise</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">My Portfolio</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a class="contact-btn" href="#contact-btn">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="intro" id="home">
+        <div class="container">
+            <div class="intro-text">
+                <h1>Hello, I am <span class="name">Abenezer</span></h1>
+                <h2>I am an <span class="highlight">Electromechanical Engineer</span> & <span class="highlight">Graphic Designer</span>.</h2>
+                <p>Creative, Dedicated & fast learner!</p>
+                <div class="intro-buttons">
+                  <a href="#hire-btn">  <button class="hire-btn" >Hire me</button> </a>
+                    <a href="ABENEZER MITIKU RESUME.pdf" download>
+                        <button class="cv-btn">Download my CV</button>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="Images/pfp.jpeg" alt="Abenezer's Photo">
+            </div>
+        </div>
+    </section>
+    <!-- Expertise Section -->
+<section class="expertise" id="expertise">
+    <h2>My Expertise</h2>
+    <div class="container">
+       
+        <div class="expertise-cards">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="icon">
+                    <img src="icons/file-icons_3d-model.png" alt="3D Modeling Icon">
+                </div>
+                <h3>3D Modeling</h3>
+                <p>Proficient in advanced 3D modeling using tools like SolidWorks, with a strong focus on creating complex and detailed designs for engineering and creative projects.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="icon">
+                    <img src="icons/Vector.png" alt="Machine Operation Icon">
+                </div>
+                <h3>Machine Operation</h3>
+                <p>Experienced in operating laser CNC machines and 3D printers with high efficiency, ensuring precision and quality in every output.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="icon">
+                    <img src="icons/fa-solid_feather-alt.png" alt="UI & UX Design Icon">
+                </div>
+                <h3>UI & UX Design</h3>
+                <p>Skilled in creating intuitive and visually appealing designs for web and app interfaces, including graphics design and front-end web development, ensuring seamless user experiences.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="icon">
+                    <img src="icons/mingcute_music-3-fill.png" alt="Music Production Icon">
+                </div>
+                <h3>Music Production</h3>
+                <p>Proficient in FL Studio, producing high-quality tracks in EDM and pop genres, blending creativity with technical expertise.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Me Section -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-me-content">
+            <!-- Image -->
+            <div class="about-me-image">
+                <img src="Images/graduation.jpg" alt="Graduation Image">
+            </div>
+            <!-- Text Content -->
+            <div class="about-me-text">
+                <h2>About Me</h2>
+                <p>
+                    I am a motivated and dedicated 
+                    <strong><span class="highlight">Electromechanical Engineer</span></strong> 
+                    with a strong foundation and hands-on experience in 
+                    <strong><span class="highlight">Robotics, Automation, and Control Systems</span></strong>. 
+                    Resourceful problem-solver, fast learner, and adept communicator. Self-starter with equal expertise in team collaborations, eager to bring innovative solutions to advanced research in Engineering.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+    <h2>My Portfolio</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="portfolio-card">
+              <img src="Images/MAiRA.JPG" alt="Maira Robot" class="portfolio-image" onclick="openModal(this)">
+              <h3>Maira Robot</h3>
+              <p>A replication of the Cobot Maira.
+                Solidwork simulation of the joints & links.
+                Motion Manupulation using Matlab/Simulink</p>
+            </div>
+           
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="portfolio-card">
+              <img src="Images/3D Model.JPG" alt="Sorter Machine">
+              <h3>Sorter Machine</h3>
+              <p>Design, Simulation & Prototyping of Sorter machine using Color Sensor for packaging system</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="portfolio-card">
+              <img src="Images/Electrical Circuit (2).bmp" alt="Electrical Simulation">
+              <h3>Electrical Simulation</h3>
+              <p>Electrical Simulation for controlling of motors integrating sensor, pushbutton and displayer LCD with buzzer and LED (Red & Green)</p>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="portfolio-card">
+              <img src="Images/LASER.jpg" alt="CNC Machine">
+              <h3>CNC Machine</h3>
+              <p>Experienced in working with CNC machines to cut various materials used in creating detailed models.</p>
+            </div>
+          </div>
+           <!-- Slide 5 -->
+           <div class="swiper-slide">
+            <div class="portfolio-card">
+              <img src="Images/FINAL.JPG" alt="Automated Machine">
+              <h3>Automated Machine</h3>
+              <p>An industrial automated dough kneading and cutting machine designed and simulated as part of an industrial internship project.</p>
+            </div>
+          </div>
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <div class="portfolio-card">
+              <img src="Images/telegram.png" alt="Telegram Mini App">
+              <h3>Telegram Mini App</h3>
+              <p>A telegram mini app developed by me</p>
+            </div>
+          </div>
+          <!-- Slide 7 -->
+          <div class="swiper-slide">
+            <div class="portfolio-card">
+              <a href="https://youtu.be/oe5E7GqYsOI"> <img src="Images/348945_413130.jpg" alt="Music Production"></a>
+              <h3>Negat  </h3> <h3>Abenezer ft.Kalkidan</h3>    <h4> <p>Produced by: Abenezer</p> </h4>  
+              <h6>"There is always light at the end of the tunnel"</h6>
+            </div>
+          </div>
+        </div>
+        <!-- Add navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      
+<!-- Education Section -->
+<section id="Education" class="education">
+    <h2>My Education & Certificates</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <img src="Images/data.png" alt="Certificate 1">
+            </div>
+             <!-- Slide 2 -->
+             <div class="swiper-slide">
+                <img src="Images/programming.png" alt="Certificate 1">
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <img src="Images/mol.jpg" alt="Certificate 2">
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <img src="Images/img010.jpg" alt="Certificate 3">
+            </div>
+            <div class="swiper-slide">
+                <img src="Images/edi.jpg" alt="Certificate 3">
+            </div>
+            <div class="swiper-slide">
+                <img src="Images/exit.png" alt="Certificate 3">
+            </div>
+            <!-- Add more slides as necessary -->
+        </div>
+        <!-- Swiper Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact-btn">
+    <h3>Contact Me</h3>
+    <div id="hire-btn" class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+            <form action="mailto:abenytone@gmail.com" method="post" enctype="text/plain">
+                <div class="form-fields-row">
+                    <!-- Name Fields -->
+                    <div class="form-field">
+                        <label for="first-name">Full Name</label>
+                        <input type="text" id="first-name" name="Full-name" required>
+                    </div>
+                    
+                </div>
+                <!-- Contact Details -->
+                <div class="form-field">
+                    <label for="topic">Select Topic</label>
+                    <select id="topic" name="topic">
+                        <option value="Web Development">Electromechanical Works</option>
+                        <option value="Design">3D Modeling & Design</option>
+                        <option value="App Development">Web Development</option>
+                        <option value="Graphics Design">Graphics Design</option>
+                        <option value="Music Production">Music Production</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+               
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+        
+        <!-- Contact Info and Social Media -->
+        <div class="contact-info">
+            <h3>Contact Info</h3>
+            <p>Email: abenytone@gmail.com</p>
+            <p>Phone: 09 4816 6615</p>
+            <p>Address: Addis Ababa, Ethiopia</p>
+            <h3>Follow Me</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <img src="Media/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                    <img src="Media/x.png" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <img src="Media/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <img src="Media/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <img src="Media/telegram.png" alt="Telegram">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <img src="Media/youtube.png" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </div>
+
+ <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo and Description -->
+        <div class="footer-logo">
+            <h6>Abenezer Mitiku</h6>
+            <p>Creating innovative solutions for your digital needs.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#expertise">My Expertise</a></li>
+                 <li><a href="#about">About Me</a></li>
+                 <li><a href="#portfolio">My Portfolio</a></li>
+                 <li><a href="#Education">Education</a></li>
+              
+            </ul>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="footer-socials">
+            <h3>Follow Me</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <img src="/media/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                    <img src="/media/x.png" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <img src="Media/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <img src="Media/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Abenezer. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</section>
+
+
+
+
+<script>
+// JavaScript to Toggle Dropdown Menu
+document.querySelector('.hamburger').addEventListener('click', function () {
+    const nav = document.querySelector('.nav ul');
+    nav.classList.toggle('show'); // Add a "show" class to toggle visibility
+});
+
+</script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+    
+</script>
+<script src="main.js" defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,793 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styling */
+/* General Styles */
+header {
+    position: relative; /* Changed to relative so it doesn't cover content */
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.454);
+    color: rgb(25, 59, 255);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays above content */
+  }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a4a4a;
+    list-style: none;
+    margin: 15px;
+}
+
+.logo h3 {
+    font-size: 1.5rem;
+    color: #5737da;
+}
+
+/* Base styles for navigation */
+.contact-btn  {
+    background-color: #ffffff70;
+    font-size: 14px;
+    height: 20px;
+    color: white;
+    padding: 2px 2px;
+    border: 3px solid #603af9;
+    border-radius: 8px;
+    
+    
+}
+
+.contact-btn:hover {
+    background-color: #001df538;
+    color: white;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #000;
+}
+.nav ul li a:hover {
+    color:#603af9;
+}
+
+/* Hamburger menu (mobile only) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    
+}
+
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+    .nav ul {
+        display: none; /* Hide navbar by default */
+        flex-direction: column;
+        gap: 0;
+        background:#dfdede;
+        position: absolute;
+        top: 137px;
+        left: 0;
+        width: 150px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: 4px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .nav ul.show {
+        display: flex; /* Show navbar when "show" class is toggled */
+    }
+
+    .hamburger {
+       
+        display: flex; 
+        margin-left: 0%;
+    }
+}
+
+
+
+/* Introduction Section */
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center content */
+    align-items: center;
+    gap: 20px;
+    text-align: center; /* Center text on smaller screens */
+    padding: 100px 2px;
+    background-color: #f2f2f3;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.intro-text {
+    max-width: 600px; /* Restrict width for better readability */
+}
+
+.intro-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1px;
+}
+
+.name {
+    color: #6c63ff;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #6c63ff;
+    font-weight: bold;
+}
+
+.intro-text p {
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+.intro-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center buttons */
+    gap: 10px;
+}
+
+.hire-btn, .cv-btn {
+    padding: 10px 20px;
+    border: 2px solid #6c63ff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hire-btn {
+    background-color: #6c63ff;
+    color: white;
+}
+.hire-btn:hover {
+    background-color: white;
+    color: #6c63ff;
+}
+
+.cv-btn {
+    background-color: white;
+    color: #6c63ff;
+}
+.cv-btn:hover {
+    background-color: #7451fd;
+    color: white;
+}
+
+.intro-image img {
+    display: block;
+    max-width: 300px;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    border: 10px solid #6c63ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: right;
+        gap: 10px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .intro {
+        padding: 80px 10px;
+    }
+
+    .intro-text {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .intro-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hire-btn, .cv-btn {
+        width: 100%; /* Make buttons full width */
+        text-align: center;
+    }
+}
+
+/* Expertise Section */
+.expertise {
+    border-top: 2PX solid #5837da2f;
+    border-bottom: 2PX solid #5837da2f;
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.expertise h2 {
+    font-size: 2rem;
+    color: #6c63ff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.expertise-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card .icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card .icon img {
+    max-width: 100%;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #6c63ff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* About Me Section */
+.about {
+    border-bottom: 2PX solid #5837da2f;
+    padding: 45px 25px;
+    background-color: #f9f9f9;
+    
+}
+
+.about-me-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.about-me-image {
+    flex: 300px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.about-me-image img {
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid #6c63ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.about-me-text {
+    flex: 2 1 400px;
+}
+
+.about-me-text h2 {
+    font-size: 2rem;
+    color: #6c63ff;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.about-me-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Portfolio Section */
+
+
+#portfolio h2 {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 2rem;
+    color: #6c63ff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Swiper Container */
+.swiper-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+/* Swiper Wrapper */
+.swiper-wrapper {
+    display: flex;
+    align-items: stretch;  /* Ensures the slides stretch equally */
+}
+
+/* Individual Slides */
+.swiper-slide {
+    flex-shrink: 0;
+    width: calc(100% - 20px); /* Adjust width for spacing */
+    max-width: 300px;
+    margin: 0 10px;
+    background: #f9f9f9;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.swiper-slide:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Portfolio Cards - Equal Height */
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;  /* Allow cards to grow equally */
+    background: #f9f9f9;
+    text-align: left;
+}
+
+.portfolio-card img {
+    width: 100%;
+    border-radius: 3px;
+    padding-bottom: 15px;
+}
+
+.portfolio-card h3 {
+    font-size: 1.2rem;
+    color: #05052b;
+    margin-bottom: 10px;
+}
+
+.portfolio-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
+    
+}
+
+/* Swiper Buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: #ffffff;
+    margin-left: 0px;
+    border: 20px solid #ffffff69;
+}
+
+/* Adjust Swiper Container size */
+.swiper-container {
+    width: 150%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Education Section */
+.education {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    border-top: 2PX solid #5837da2f;
+
+}
+
+.education h2 {
+    font-size: 2rem;
+    color: #6c63ff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Swiper Container for Certificates */
+.swiper-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+/* Swiper Wrapper */
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Individual Slides */
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 500px; /* Adjust the size based on your needs */
+    margin: 0 10px;
+    background: #f9f9f9;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swiper-slide img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+/* Swiper Buttons */
+.swiper-button-next, .swiper-button-prev {
+    width: 40px;          /* Set the width and height to make them circular */
+    height: 40px;
+    border-radius: 50%;   /* Make the buttons circular */
+    background-color: rgba(255, 255, 255, 0.299); /* White background */
+    color: #6c63ff;       /* Button icon color (change if you want a different color) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;   /* Position the buttons correctly */
+    top: 50%;             /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 10;          /* Make sure the buttons are on top of other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: add a little shadow */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 18px;      /* Adjust the size of the arrows */
+    font-weight: bold;    /* Make the arrows bold */
+}
+
+/* Optional: Hover effect */
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: #8c8b8b5a; /* Add color change on hover */
+    color: rgba(138, 183, 250, 0.502);   
+    font: 20px            /* Change the icon color on hover */
+}
+/* Contact Section */
+.contact {
+
+    padding-top: 40px;
+    background-image: url('Images/bg/bg.jpg'); /* Replace with your desired background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-attachment: fixed; /* Optional: Makes it look smoother */
+    position: relative;
+    z-index: 1;
+}
+
+
+.contact::before {
+    border-top: 5px solid rgba(0, 0, 0, 0.557);
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.352); /* Dark overlay */
+    backdrop-filter: blur(14px); /* Subtle blur for background */
+    z-index: 1;
+}
+
+.contact h3 {
+    font-size: 2.2rem;
+    color: #ffffff; 
+    text-align: center;
+    margin-bottom: 80px;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+}
+
+/* Contact Container - Flexbox layout */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Responsive adjustment */
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 900px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Contact Form Container (Glassmorphism) */
+.contact-form-container {
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    backdrop-filter: blur(15px); /* Glassmorphism effect */
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    flex: 1;
+}
+
+/* Form Fields Layout */
+.form-fields-row {
+    display: flex;
+    flex-wrap: wrap; /* Adjust for responsiveness */
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-field {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-field label {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: #5E3BEE;
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #5737da;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #37287a;
+}
+
+/* Contact Info (Glassmorphism) */
+.contact-info {
+    flex: 1;
+    max-width: 350px;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.contact-info h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #ddd;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.contact-info .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-info .social-icons .social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-info .social-icons .social-icon img:hover {
+    transform: scale(1.3);
+}
+
+/* Footer Styles */
+.footer {
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.646);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.646);
+
+    background-color: #00000085; /* Unified footer background color */
+    color: white;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+    padding-bottom: 30px; /* Remove padding to fit the background correctly */
+}
+
+.footer-container {
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for the headings */
+.footer-logo h2,
+.footer-links h3,
+.footer-socials h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.footer-logo h6 {
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+}
+
+/* Remove bullet points from the quick links list */
+.footer-links ul {
+    list-style-type: none; /* Removes the bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for the links */
+.footer-links ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.603);
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+/* Remove the dots or "strange" elements next to the social media icons */
+.footer-socials .social-icons {
+    list-style-type: none; /* Remove bullets from the social media icons */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Align icons in the center */
+}
+
+.footer-socials .social-icons .social-icon {
+    margin: 0 10px;
+}
+
+.footer-socials .social-icons .social-icon img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.1s ease;
+}
+
+.footer-socials .social-icons .social-icon img:hover {
+    transform: scale(1.2);
+}
+
+
+.footer-links ul li a:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(1.2);
+}
+
+.footer-socials .social-icons .social-icon img {
+    width: 20px;
+    height: 20px;
+    
+}
+
+.footer-socials .social-icons .social-icon img:hover {
+    transform: scale(1.7);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.251);
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
